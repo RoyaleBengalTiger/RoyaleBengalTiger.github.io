@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="LPG Backup is a private backup utility for securely storing recovery copies of a self-hosted LPG management system in an authorized Google Drive account.">
+  <meta name="color-scheme" content="light dark">
+  <title>LPG Backup | Private Google Drive Backup Utility</title>
+  <style>
+    :root { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color-scheme: light dark; --bg:#f6f8fb; --card:#fff; --ink:#172235; --muted:#536176; --line:#dfe5ed; --accent:#176cba; --accent-pale:#e9f3fd; }
+    @media (prefers-color-scheme:dark) { :root { --bg:#101722; --card:#172231; --ink:#eef5ff; --muted:#b5c2d4; --line:#344359; --accent:#8ecaff; --accent-pale:#20374f; } }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--bg); color:var(--ink); line-height:1.65; }
+    .wrap { width:min(880px, calc(100% - 36px)); margin:0 auto; }
+    header { border-bottom:1px solid var(--line); background:var(--card); }
+    nav { display:flex; justify-content:space-between; align-items:center; gap:18px; padding:17px 0; }
+    .brand { color:var(--ink); font-size:1.05rem; font-weight:750; text-decoration:none; letter-spacing:-.02em; }
+    .links { display:flex; flex-wrap:wrap; gap:18px; font-size:.91rem; }
+    a { color:var(--accent); }
+    .links a { color:var(--muted); text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    main { padding:62px 0 72px; }
+    .eyebrow { display:inline-block; background:var(--accent-pale); color:var(--accent); border-radius:99px; padding:5px 12px; font-size:.79rem; font-weight:700; }
+    h1 { margin:19px 0 14px; font-size:clamp(2.2rem, 6vw, 3.6rem); letter-spacing:-.055em; line-height:1.12; }
+    .intro { font-size:1.1rem; max-width:730px; color:var(--muted); margin-bottom:32px; }
+    .panel { background:var(--card); border:1px solid var(--line); border-radius:16px; padding:25px 28px; margin:18px 0; }
+    h2 { font-size:1.15rem; margin:0 0 10px; letter-spacing:-.02em; }
+    p { margin:8px 0 12px; }
+    ul { padding-left:21px; margin:8px 0 0; }
+    li+li { margin-top:7px; }
+    .note { color:var(--muted); font-size:.91rem; }
+    footer { border-top:1px solid var(--line); padding:22px 0 34px; color:var(--muted); font-size:.89rem; }
+    footer .wrap { display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap; }
+    @media(max-width:520px) { main{padding:44px 0 48px;} .panel{padding:19px;} }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="wrap" aria-label="Main navigation">
+      <a class="brand" href="./">LPG Backup</a>
+      <div class="links"><a href="./">Home</a><a href="privacy.html">Privacy Policy</a></div>
+    </nav>
+  </header>
+  <main class="wrap">
+    <span class="eyebrow">Private backup utility</span>
+    <h1>Reliable recovery for LPG Management</h1>
+    <p class="intro">LPG Backup is a privately operated utility intended to save recovery copies of a self-hosted LPG Management system to a Google Drive account authorized by its owner. It is not a public file-storage or backup service.</p>
+    <section class="panel" aria-labelledby="purpose">
+      <h2 id="purpose">What it does</h2>
+      <ul>
+        <li>Creates scheduled recovery copies of the application's PostgreSQL database and necessary system files.</li>
+        <li>Uses Google Drive, with the account owner's consent, as off-site backup storage.</li>
+        <li>Supports retention and restoration of backup copies in case of server failure or data loss.</li>
+      </ul>
+    </section>
+    <section class="panel" aria-labelledby="access">
+      <h2 id="access">Google Drive access</h2>
+      <p>The owner explicitly authorizes a Google account through Google's OAuth consent process. Access is used to transfer and manage backup files within the permissions granted. The utility is not intended to read unrelated personal documents or offer access to other users.</p>
+      <p class="note">The permissions requested during authorization are the authoritative description of what the connected Google account permits.</p>
+    </section>
+    <section class="panel" aria-labelledby="security">
+      <h2 id="security">Private operation and security</h2>
+      <p>The backup process is intended to run on a private server with server-side credentials. Backup contents are intended to be encrypted before off-site storage. The website itself is informational and does not connect to Google Drive or collect sign-in credentials.</p>
+      <p>See the <a href="privacy.html">Privacy Policy</a> for further information about access, storage, retention and revocation.</p>
+    </section>
+  </main>
+  <footer><div class="wrap"><span>© 2026 LPG Backup · Private-use utility</span><a href="privacy.html">Privacy Policy</a></div></footer>
+</body>
+</html>
